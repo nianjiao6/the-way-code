@@ -15,7 +15,7 @@ import utils.Pair;
  */
 public class Solution010 {
     static List<Pair<int[], int[]>> checkList = new ArrayList<>();
-    {
+    static {
         checkList.add(new Pair<>(new int[] { 1, 2, 3, 2 }, new int[] { 2 }));
     }
 
