@@ -5,13 +5,13 @@ import (
 	"testing"
 )
 
-type pair struct {
-	left  []int
-	right []int
+type Pair030 struct {
+	Left  []int
+	Right []int
 }
 
-func initData() []pair {
-	return []pair{{left: []int{1, 2, 3, 2}, right: []int{2}}}
+func initData() []Pair030 {
+	return []Pair030{{Left: []int{1, 2, 3, 2}, Right: []int{2}}}
 }
 
 func IsContainInt(items []int, item int) bool {
@@ -23,18 +23,18 @@ func IsContainInt(items []int, item int) bool {
 	return false
 }
 
-func TestFunc(t *testing.T) {
+func TestFunc030(t *testing.T) {
 	list := initData()
 	flag := true
-	s := new(Solution101)
+	s := new(Solution030)
 	for _, item := range list {
-		data := item.left
-		pass := item.right
+		data := item.Left
+		pass := item.Right
 		num := s.FindRepeatNumber(data)
 
 		if !(len(pass) == 0 && num == -1) && !IsContainInt(pass, num) {
 			flag = false
-			fmt.Printf("匹配失败 -> %p : %p\n", data, pass)
+			fmt.Println("匹配失败 -> ", data, "  : ", pass)
 		}
 	}
 
